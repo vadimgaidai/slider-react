@@ -21,7 +21,7 @@ class App extends Component {
       </div>*/
 
 
-        <div className="wrapper">
+        <div className="Wrapper">
             <SayFullName name ="Вадим" surname="Гайдай" link="vk.com" />
             
         </div>
