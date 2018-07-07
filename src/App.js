@@ -12,7 +12,7 @@ import Header from './components/header'
 import Menu from './components/menu'
 import Main from './components/main'
 
-const bgMain = process.env.PUBLIC_URL + './img/bg.jpg';
+const bgMain = process.env.PUBLIC_URL + '/img/bg.jpg';
 
 const HeaderWrapper = styled.header`
     width: 100%;
@@ -20,7 +20,7 @@ const HeaderWrapper = styled.header`
     background-color: #242424;
     opacity: 0.8;
 `
-const MenuWrapper = styled.div`
+const MenuWrapper = styled.section`
     height: 89px;
     padding-top: 20px;
 `
