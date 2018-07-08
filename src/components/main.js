@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 
 import styled from 'styled-components';
+import Slider from './slider';
 
 const Repair = styled.div`
     color: #ffffff;
@@ -39,7 +40,7 @@ const ButtonMain = styled.button`
     line-height: 24px;
     margin-top: 32px;
 `
-class  Main extends React.Component{
+class  Main extends Component{
 
     render(){
         return(
@@ -60,7 +61,7 @@ class  Main extends React.Component{
                 </Col>
 
                 <Col lg={6} lgOffset={1}>
-
+                    <Slider></Slider>
                 </Col>
 
             </Row>

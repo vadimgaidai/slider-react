@@ -52,7 +52,7 @@ const CallButton = styled.button`
     font-weight: 400;
     border: 1px solid #3fc7db;
 `
-class Adress extends  React.Component{
+class Adress extends  Component{
     render(){
         return(
             <span> {this.props.addr} </span>
@@ -60,14 +60,14 @@ class Adress extends  React.Component{
     }
 }
 
-class TellNumber extends  React.Component{
+class TellNumber extends  Component{
     render(){
         return(
             <span> {this.props.tel}</span>
         );
     }
 }
-class  Menu extends React.Component{
+class  Menu extends Component{
 
     render(){
         return(

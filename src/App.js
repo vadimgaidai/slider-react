@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
+//import Row from 'react-bootstrap/lib/Row';
+//import Col from 'react-bootstrap/lib/Col';
 
 import styled from 'styled-components';
 
@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import Header from './components/header'
 import Menu from './components/menu'
 import Main from './components/main'
+
 
 const bgMain = process.env.PUBLIC_URL + '/img/bg.jpg';
 
