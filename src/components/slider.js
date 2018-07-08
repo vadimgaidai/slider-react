@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 import Slide_1 from '../img/slide-1.png';
@@ -13,16 +14,16 @@ class Slider extends Component{
             this.state = {
                 slide: [
                     {
-                        eachSlide: 'url(${Slide_1})'
+                        eachSlide: `url(${ Slide_1})`
                     },
                     {
-                        eachSlide: 'url(${Slide_2})'
+                        eachSlide: `url(${Slide_2 })`
                     },
                     {
-                        eachSlide: 'url(${Slide_3})'
+                        eachSlide: `url(${Slide_3})`
                     },
                     {
-                        eachSlide: 'url(${Slide_4})'
+                        eachSlide: `url(${Slide_4})`
                     }
                 ],
                 autoplay: false,
@@ -30,7 +31,7 @@ class Slider extends Component{
                 max: 0
             }
             this.state.max = this.state.slide.length;
-            this.intervalBetweenSlides = this. intervalBetweenSlides.bind(this);
+            this.intervalBetweenSlides = this.intervalBetweenSlides.bind(this);
             this.toggleAutoplay = this.toggleAutoplay.bind(this);
             this.nextOne = this.nextOne.bind(this);
             this.prevOne = this.prevOne.bind(this);
@@ -42,11 +43,11 @@ class Slider extends Component{
             clearInterval(this.interval)
         }
         intervalBetweenSlides(){
-            if(this.state.autoplay ===true){
-                if(this.state.active === this.state.max -1 ){
+            if(this.state.autoplay === true){
+                if(this.state.active === this.state.max - 1 ){
                     this.state.active = 0
                 }else{
-                    this.state.active + 1
+                    this.state.active++
                 }
 
                 this.setState({
@@ -71,7 +72,7 @@ class Slider extends Component{
         prevOne(){
             (this.state.active > 0) ?
                 this.setState({
-                    active:  this.state.active + 1
+                    active:  this.state.active - 1
                 }) :
                 this.setState({
                     active:  this.state.max - 1
@@ -95,11 +96,11 @@ class Slider extends Component{
             }
         }
         renderSlide(){
-            const  transition = 100 / this.state.slide.length + "%"
+            const  transition = 100/this.state.slide.length + "%"
 
-            return this.state.slide.map((item, index) =>(
+            return this.state.slide.map((item, index) => (
                 <div
-                    classname='each-slide'
+                    className='each-slide'
                     key = {index}
                     style = {{backgroundImage: item.eachSlide, width: transition}}
                 >
@@ -112,7 +113,7 @@ class Slider extends Component{
                     className={this.isActive(index) + ' dots'}
                     key={index}
                     ref = "dots"
-                    onClick={this.dots.bind(this,index)}
+                    onClick={this.dots.bind(this, index)}
                 >
                     <a>&#9679;</a>
                 </li>
